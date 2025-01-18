@@ -27,6 +27,17 @@ tank_links = (
 )
 
 
-def get_link():
-    return healer_links[1] # For now, im focusing on shamans healer.
+all_links = [healer_links, dps_links, tank_links]
 
+def get_link():
+    return healer_links[3] # For now, im focusing on shamans healer.
+
+
+
+def export_all_links():
+    for role_links in all_links:
+        for link in role_links:
+            print(link)
+
+
+export_all_links()
